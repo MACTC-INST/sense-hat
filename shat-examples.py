@@ -1,4 +1,4 @@
-import os, random,time
+import os, pprint, random, time
 from sense_hat import SenseHat
 sense = SenseHat()
 
@@ -46,11 +46,22 @@ def load_picture():
 # Set a single pixel (x, y, r, g, b)
 #sense.set_pixel(0,0,255,0,0)
 
+# Sensor data
+#sense.show_message(f'Temp: {sense.get_temperature():.2f}')
+#sense.show_message(f'Hum: {sense.get_humidity():.2f}')
+#sense.show_message(f'Prs: {sense.pressure:.2f}')
+
+# Loop through some examples
 while True:  
+    load_picture()
+    time.sleep(5)
+    
     set_pixels_question()
     time.sleep(5)
+
     c = 0
-    while c < 200:
+    while c < 100:
         set_pixels_random()
         time.sleep(.1)
         c += 1
+
