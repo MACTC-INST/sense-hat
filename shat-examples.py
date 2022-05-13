@@ -40,6 +40,9 @@ def load_picture():
 def c_to_f(temp):
     return (temp * (9/5)) + 32
 
+def mbars_to_hg(millibars):
+    return millibars/33.8639
+
 # Examples 
 # Anything more than 1 line gets a function
 
@@ -67,5 +70,5 @@ while True:
     # Sensor data
     sense.show_message(f'Temp: {c_to_f(sense.get_temperature()):.2f}')
     sense.show_message(f'Hum: {sense.get_humidity():.2f}')
-    sense.show_message(f'Prs: {sense.pressure:.2f}')
+    sense.show_message(f'Prs: {mbars_to_hg(sense.pressure):.2f}')
 
