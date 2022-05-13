@@ -51,6 +51,7 @@ def load_picture():
 #sense.show_message(f'Hum: {sense.get_humidity():.2f}')
 #sense.show_message(f'Prs: {sense.pressure:.2f}')
 
+
 # Loop through some examples
 while True:  
     load_picture()
