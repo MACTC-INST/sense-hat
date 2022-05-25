@@ -30,25 +30,5 @@ class Pixel_Sand:
         If it's our current position, do nothing
         If the new position is already taken, do nothing
         """
-        new_x = self.x + x_offset
-        new_y = self.y + y_offset
-
-        # Set boundaries
-        new_x = max(0,min(7,new_x))
-        new_y = max(0,min(7,new_y))
-        if (self.x == new_x and self.y == new_y):
-            # No change
-            return
-        
-        if (self.sense.get_pixel(new_x, new_y) != [0,0,0]):
-            # Something is already there
-            return
-
-        # Unlight old pixel
-        self.sense.set_pixel(self.x,self.y,self.black)
-
-        # Light new one
-        self.x = new_x
-        self.y = new_y
-        self.sense.set_pixel(self.x,self.y,self.color)
+        pass
         
