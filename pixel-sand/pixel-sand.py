@@ -54,5 +54,5 @@ if __name__ == "__main__":
 
         # Delay more/less depending on how steep ar/ap are:
         #delay = .1 / max(max(1,abs(x_speed)), abs(y_speed))
-        delay = .1
+        delay = .05
         sleep(delay)
