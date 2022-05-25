@@ -42,10 +42,15 @@ if __name__ == "__main__":
     sense = SenseHat()
     sense.clear()
 
+    colors = [(255,0,0), (255,255,255), (0,0,255), (0,255,0)]
+
     sand = []
-    for y in range(0,2):
+    for y in range(0,4):
+        rgb = colors[y % len(colors)]
         for x in range(0,8):
-            sand.append(Pixel_Sand(sense, x, y))
+            #rgb = colors[x % len(colors)]
+            #rgb = (x*10 + y*40, 255-x*2-y*40, x*6 + y*40)
+            sand.append(Pixel_Sand(sense, x, y, rgb))
 
     while True:
         x_offset, y_offset = get_offsets(sense)
