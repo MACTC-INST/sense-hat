@@ -36,6 +36,7 @@ class Pixel_Sand:
         # Set boundaries
         new_x = max(0,min(7,new_x))
         new_y = max(0,min(7,new_y))
+        
         if (self.x == new_x and self.y == new_y):
             # No change
             return
