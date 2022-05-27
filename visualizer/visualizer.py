@@ -17,4 +17,9 @@ if __name__ == "__main__":
         #b1.update(random.randint(0,8))
         for b in bands:
             b.update(random.randint(0,8))
-        sleep(.1)
+        sleep(.08)
+
+"""
+References:
+https://towardsdatascience.com/extract-features-of-music-75a3f9bc265d
+"""
